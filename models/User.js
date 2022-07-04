@@ -1,5 +1,5 @@
 const { Schema, model, Types } = require('mongoose');
-const dateFormat = require('../utils/dateFormat');
+
 
 const  UserSchema = new Schema(
     {
@@ -7,12 +7,12 @@ const  UserSchema = new Schema(
         type: Schema.Types.ObjectId,
         default: () => new Types.ObjectId()
      },
-     UserName: {
+     username: {
         type: String,
         required: true,
         trim: true,
      },
-     UserEmail: {
+     email: {
         type: String,
         required: true,
         trim: true,
@@ -25,3 +25,5 @@ const  UserSchema = new Schema(
     }
 }     
 );
+const User = model('User', UserSchema);
+module.exports =  User;
