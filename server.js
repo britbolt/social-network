@@ -20,4 +20,3 @@ mongoose.set('debug', true);
 
 app.listen(PORT, () => console.log(`connected on localhost:${PORT}`));
 
-// 'mongodb+srv://britbolt:G5qqy!ep698c32k@clusterbolt.ingk23h.mongodb.net/?retryWrites=true&w=majority'
