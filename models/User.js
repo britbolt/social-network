@@ -28,13 +28,13 @@ const  UserSchema = new Schema(
 {
     toJSON: {
         virtuals: true,
-        getters: true
+        
     },
     id: false
 }     
 );
 
-UserSchema.virtual('friendcount').get(function(){
+UserSchema.virtual('friendCount').get(function() {
     return this.friends.length;
 });
 
